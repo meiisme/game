@@ -15,6 +15,6 @@ else:
     if (i) in answer:           # 如果位置不同，但答案裡有包含使用者輸入的數字
         b += 1                       # 就將 b 增加 1
     n += 1                           # 因為輸入的每個數字都要判斷，將 n 增加 1
-  output = ','.join(user).replace(',','')    # 四個數字都判斷後，使用 join 將串列合併成字串
+
   st.write(f'{output}: {a}A{b}B')
 st.write('答對了！')
