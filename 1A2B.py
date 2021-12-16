@@ -28,7 +28,7 @@ class GameState:
 
 state = persistent_game_state(initial_state=GameState(''.join(random.choices(DIGITS, k=4))))
 
-st.write("""MASTER MIND""")
+st.write("""1A2B the game""")
 st.write(f"I, the computer, will choose a secret {K}-digit number "
          "with all digits between 0 and 5. It is your job to "
          "guess the number. Each time you guess I will tell you a "
