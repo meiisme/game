@@ -2,7 +2,7 @@ import streamlit as st
 import random
 answer = random.sample(range(1, 10), 4)
 text_input = st.text_input(label='Enter your name')
-    submit_button = st.form_submit_button(label='Submit')
+submit_button = st.form_submit_button(label='Submit')
 
 a = b = n = 0     # 設定 a、b、n 三個變數，預設值 0
 while a!=4:       # 使用 while 迴圈，直到 a 等於 4 才停止
