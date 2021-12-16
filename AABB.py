@@ -1,6 +1,6 @@
 import random
 answer = random.sample(range(1, 10), 4)
-print(answer)
+st.write(answer)
 
 a = b = n = 0     # 設定 a、b、n 三個變數，預設值 0
 while a!=4:       # 使用 while 迴圈，直到 a 等於 4 才停止
@@ -14,5 +14,5 @@ while a!=4:       # 使用 while 迴圈，直到 a 等於 4 才停止
         b += 1                       # 就將 b 增加 1
     n += 1                           # 因為輸入的每個數字都要判斷，將 n 增加 1
   output = ','.join(user).replace(',','')    # 四個數字都判斷後，使用 join 將串列合併成字串
-  print(f'{output}: {a}A{b}B')
-print('答對了！')
+  st.write(f'{output}: {a}A{b}B')
+st.write('答對了！')
