@@ -59,7 +59,7 @@ if st.button("NEW GAME"):
 
 
 if not state.game_over:
-    raw_guess = st.text_input(f"please guess a {K} digit number, digits 0 to 5: ", key=state.game_number)
+    raw_guess = st.text_input(f"please guess a {K} digit number, digits 0 to 9: ", key=state.game_number)
     guess = parse_guess(raw_guess) if raw_guess else ''
 
     if not guess and not state.previous_guesses:
