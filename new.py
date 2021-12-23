@@ -11,6 +11,7 @@ for i in range(4):
     answer+=str(items[i])
 while(True):
     number=st.text_input('請輸入數字： ')
+    st.write(answer)
     if not number.isdigit():  #cheak all input is digit
         pass
     else:
@@ -26,7 +27,6 @@ while(True):
         st.write('{0}A{1}B'.format(a_count,b_count))
         a_count=0
         b_count=0
-        st.write(answer)
         
         
         
