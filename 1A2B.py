@@ -6,7 +6,7 @@ import streamlit as st
 
 from gamestate import persistent_game_state
 
-DIGITS = ['0', '1', '2', '3', '4', '5','6','7','8','9']
+DIGITS = ['0', '1', '2', '3', '4', '5']
 K = 4
 
 
@@ -28,7 +28,7 @@ class GameState:
 
 state = persistent_game_state(initial_state=GameState(''.join(random.choices(DIGITS, k=4))))
 
-st.write("""1A2B the game""")
+st.write("""MASTER MIND""")
 st.write(f"I, the computer, will choose a secret {K}-digit number "
          "with all digits between 0 and 5. It is your job to "
          "guess the number. Each time you guess I will tell you a "
@@ -50,16 +50,16 @@ if st.button("NEW GAME"):
 
 
 # Don't use Union types!
-#def parse_guess(guess: str) -> Union[str, List[str]]:
-#if not all('0' <= c <= '5' for c in guess):
-#return "I said **digits between 0 and 5**"
-#if len(guess) != K:
-#return f"I said **{K}** digits!"
-#return list(guess)
+def parse_guess(guess: str) -> Union[str, List[str]]:
+    if not all('0' <= c <= '5' for c in guess):
+        return "I said **digits between 0 and 5**"
+    if len(guess) != K:
+        return f"I said **{K}** digits!"
+    return list(guess)
 
 
 if not state.game_over:
-    raw_guess = st.text_input(f"please guess a {K} digit number, digits 0 to 9: ", key=state.game_number)
+    raw_guess = st.text_input(f"please guess a {K} digit number, digits 0 to 5: ", key=state.game_number)
     guess = parse_guess(raw_guess) if raw_guess else ''
 
     if not guess and not state.previous_guesses:
