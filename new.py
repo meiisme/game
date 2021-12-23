@@ -25,12 +25,12 @@ while(True):
         if number==answer:
             st.write('很棒你答對了')
             break
-    for i in range(4):
-        for j in range(4):
-            if i==j and number[i]==answer[j]:
-                a_count+=1
-            elif number[i]==answer[j]:
-                b_count+=1
+        for i in range(4):
+            for j in range(4):
+                if i==j and number[i]==answer[j]:
+                    a_count+=1
+                elif number[i]==answer[j]:
+                    b_count+=1
         st.write('{0}A{1}B'.format(a_count,b_count))
         a_count=0
         b_count=0
