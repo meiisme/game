@@ -53,9 +53,9 @@ if st.button("NEW GAME"):
 #def parse_guess(guess: str) -> Union[str, List[str]]:
 #if not all('0' <= c <= '5' for c in guess):
 #return "I said **digits between 0 and 5**"
-if len(guess) != K:
-        return f"I said **{K}** digits!"
-    return list(guess)
+#if len(guess) != K:
+#return f"I said **{K}** digits!"
+#return list(guess)
 
 
 if not state.game_over:
