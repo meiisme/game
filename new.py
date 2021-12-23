@@ -1,8 +1,15 @@
 #1A2B game
+from typing import Tuple, NamedTuple, Union, List
+import random
+import dataclasses
+
 import streamlit as st
+
+from gamestate import persistent_game_state
+
 import random
 
-items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+items = ['1','2','3','4','5','6','7','8','9','0']
 answer=random.shuffle(items)
 answer=''
 a_count=0 # initial A count
