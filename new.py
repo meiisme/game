@@ -3,8 +3,8 @@ import streamlit as st
 import random
 
 items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-answer = random.items(range(1, 10), 4)
-
+random.shuffle(items)
+answer=''
 a_count=0 # initial A count
 b_count=0 # initial B count
 for i in range(4):
@@ -30,5 +30,6 @@ while(True):
         a_count=0
         b_count=0
         
+random.shuffle(items)
         
         
