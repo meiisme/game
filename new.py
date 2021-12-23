@@ -10,7 +10,7 @@ b_count=0 # initial B count
 for i in range(4):
     answer+=str(items[i])
 while(True):
-    number=st.text_input('Enter the number: ')
+    number=st.text_input('請輸入數字： ')
     if not number.isdigit():  #cheak all input is digit
         pass
     else:
