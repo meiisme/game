@@ -1,7 +1,7 @@
 import streamlit as st
 import random
 answer = random.sample(range(1, 10), 4)
-
+st.write(answer)
 a = b = n = 0     
 while a!=4:       
   a = b = n = 0   
@@ -13,3 +13,4 @@ else:
     if (i) in answer:          
         b += 1                       
     n += 1                          
+random.shuffle(items)
