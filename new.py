@@ -3,8 +3,8 @@ import streamlit as st
 import random
 
 items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-random.choices(items)
-answer=''
+answer=random.sample(items,4)
+
 a_count=0 # initial A count
 b_count=0 # initial B count
 for i in range(4):
