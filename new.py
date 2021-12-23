@@ -4,7 +4,7 @@ import random
 
 items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 
-j=answer(random.shuffle(items))
+j=answer=random.shuffle(items)
 
 a_count=0 # initial A count
 b_count=0 # initial B count
