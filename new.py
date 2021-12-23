@@ -1,29 +1,19 @@
 #1A2B game
-from typing import Tuple, NamedTuple, Union, List
 import random
-import dataclasses
-
-import streamlit as st
-
-from gamestate import persistent_game_state
-
-items = ['1','2','3','4','5','6','7','8','9','0']
-
-
+items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+random.shuffle(items)
 answer=''
 a_count=0 # initial A count
 b_count=0 # initial B count
-
 for i in range(4):
     answer+=str(items[i])
 while(True):
-    number=st.text_input('請輸入數字： ')
-    st.write(answer)
+    number=input('Enter the number: ')
     if not number.isdigit():  #cheak all input is digit
         pass
     else:
         if number==answer:
-            st.write('很棒你答對了')
+            print('excellent you guess the correct number')
             break
         for i in range(4):
             for j in range(4):
@@ -31,10 +21,6 @@ while(True):
                     a_count+=1
                 elif number[i]==answer[j]:
                     b_count+=1
-        st.write('{0}A{1}B'.format(a_count,b_count))
+        print('{0}A{1}B'.format(a_count,b_count))
         a_count=0
         b_count=0
-        
-
-        
-        
