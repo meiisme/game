@@ -4,15 +4,15 @@ import random
 
 items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 
-answer=random.shuffle(items)
+j=answer(random.shuffle(items))
 
 a_count=0 # initial A count
 b_count=0 # initial B count
+
 for i in range(4):
     answer+=str(items[i])
    
 while(True):
-    
     number=st.text_input('請輸入數字： ')
     st.write(answer)
     if not number.isdigit():  #cheak all input is digit
