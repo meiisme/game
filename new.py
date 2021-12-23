@@ -3,7 +3,6 @@ import streamlit as st
 import random
 
 items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-
 answer=random.shuffle(items)
 
 a_count=0 # initial A count
