@@ -10,7 +10,6 @@ a_count=0 # initial A count
 b_count=0 # initial B count
 
 for i in range(4):
-    answer=random.shuffle(items)
     answer+=str(items[i])
    
 while(True):
