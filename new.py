@@ -4,7 +4,7 @@ import streamlit as st
 
 items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 random.shuffle(items)
-st.write(answer)
+
 
 answer=''
 
@@ -14,6 +14,7 @@ for i in range(4):
     answer+=str(items[i])
 while(True):
     number=st.text_input('Enter the number: ')
+    st.write(answer)
     if not number.isdigit():  #cheak all input is digit
         pass
     else:
