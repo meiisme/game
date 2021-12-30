@@ -22,13 +22,15 @@ while(True):
             st.write('excellent you guess the correct number')
             break
         for i in range(4):
+            st.session_state(answer)
+            st.write(answer)
             for j in range(4):
                 if i==j and number[i]==answer[j]:
                     a_count+=1
-                    st.write(answer)
+                    
                 elif number[i]==answer[j]:
                     b_count+=1
-                    st.session_state(answer)
+                #    st.session_state(answer)
         st.write('{0}A{1}B'.format(a_count,b_count))
         a_count=0
         b_count=0
