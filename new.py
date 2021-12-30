@@ -5,7 +5,7 @@ import streamlit as st
 items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 random.shuffle(items)
 st.write(answer)
-st.session_state(answer)
+
 answer=''
 
 a_count=0 # initial A count
@@ -26,6 +26,7 @@ while(True):
                     a_count+=1
                 elif number[i]==answer[j]:
                     b_count+=1
+                    st.session_state(answer)
         st.write('{0}A{1}B'.format(a_count,b_count))
         a_count=0
         b_count=0
