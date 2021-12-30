@@ -1,4 +1,4 @@
-st.title(1A2B game)
+st.title('1A2B game')
 import random
 import streamlit as st
 
