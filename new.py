@@ -5,7 +5,9 @@ st.title('1A2B game')
 st.markdown("""
 大家應該都有玩過這個猜數字的遊戲，
 
-A 代表的是：數字猜對位子也對。B 代表的是：數字對了，但是位子不對。
+A 代表的是：數字猜對位子也對。
+
+B 代表的是：數字對了，但是位子不對。
 """)
 
 items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
@@ -23,7 +25,7 @@ if submit_button:
         answer+=str(items[i])
     st.session_state.answer=answer
 
-number=st.sidebar.text_input('Enter the number: ')
+number=st.sidebar.text_input('請輸入數字')
 #while(True):
     #number=st.text_input('Enter the number: ')
 #st.write(st.session_state.answer)
