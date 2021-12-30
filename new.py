@@ -28,7 +28,7 @@ else:
         st.write('excellent you guess the correct number')
         #break
     for i in range(4):
-        st.session_state(st.session_state.answer)
+        #st.session_state(st.session_state.answer)
         for j in range(4):
             if i==j and number[i]==st.session_state.answer[j]:
                 a_count+=1
