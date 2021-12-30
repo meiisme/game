@@ -25,6 +25,7 @@ while(True):
             for j in range(4):
                 if i==j and number[i]==answer[j]:
                     a_count+=1
+                    st.write(answer)
                 elif number[i]==answer[j]:
                     b_count+=1
                     st.session_state(answer)
