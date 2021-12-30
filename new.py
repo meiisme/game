@@ -10,8 +10,8 @@ answer=''
 
 a_count=0 # initial A count
 b_count=0 # initial B count
+st.session_state.answer=answer
 for i in range(4):
-    st.write(answer)
     answer+=str(items[i])
 while(True):
     number=st.text_input('Enter the number: ')
