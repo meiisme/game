@@ -12,7 +12,7 @@ answer=''
 a_count=0 # initial A count
 b_count=0 # initial B count
 
-submit_button = st.button(label='開始')   
+submit_button = st.button(label='開始遊戲')   
 if submit_button:
     for i in range(4):
         answer+=str(items[i])
@@ -21,7 +21,7 @@ if submit_button:
 number=st.sidebar.text_input('Enter the number: ')
 #while(True):
     #number=st.text_input('Enter the number: ')
-st.write(st.session_state.answer)
+#st.write(st.session_state.answer)
 if not number.isdigit():  #cheak all input is digit
     pass
 else:
