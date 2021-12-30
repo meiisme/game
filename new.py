@@ -11,26 +11,30 @@ answer=''
 a_count=0 # initial A count
 b_count=0 # initial B count
 
-st.session_state.answer = answer
-st.session_state.answer[for i in range(4):]
-    answer+=str(items[i])
+submit_button = st.button(label='確定')   
+if submit_button:
+    for i in range(4):
+        answer+=str(items[i])
+    st.session_state.answer=answer
+
+number=st.sidebar.text_input('Enter the number: ')
 while(True):
-    number=st.text_input('Enter the number: ')
+    #number=st.text_input('Enter the number: ')
     st.write(answer)
     if not number.isdigit():  #cheak all input is digit
         pass
     else:
-        if number==answer:
+        if number==st.session_state.answer:
             st.write('excellent you guess the correct number')
             break
         for i in range(4):
-            st.session_state(answer)
+            st.session_state(st.session_state.answer)
             for j in range(4):
-                if i==j and number[i]==answer[j]:
+                if i==j and number[i]==st.session_state.answer[j]:
                     a_count+=1
-                elif number[i]==answer[j]:
+                elif number[i]==st.session_state.answer[j]:
                     b_count+=1
                 #    st.session_state(answer)
-        st.write('{0}A{1}B'.format(a_count,b_count))
+        st.write(a_count, 'A', b_count, 'B')
         a_count=0
         b_count=0
