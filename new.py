@@ -33,7 +33,7 @@ if not number.isdigit():  #cheak all input is digit
     pass
 else:
     if number==st.session_state.answer:
-        st.write('excellent you guess the correct number')
+        st.write('好棒棒！你猜對了')
         #break
     for i in range(4):
         #st.session_state(st.session_state.answer)
