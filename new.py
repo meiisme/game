@@ -4,6 +4,7 @@ import streamlit as st
 st.title('1A2B game')
 st.markdown("""
 大家應該都有玩過這個猜數字的遊戲，
+
 A 代表的是：數字猜對位子也對。B 代表的是：數字對了，但是位子不對。
 """)
 
