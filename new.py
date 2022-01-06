@@ -22,10 +22,10 @@ a_count=0 # initial A count
 b_count=0 # initial B count
 
 submit_button = st.button(label='開始遊戲')   
-if submit_button:
-    for i in range(4):
-        answer+=str(items[i])
-    st.session_state.answer=answer
+    if submit_button:
+        for i in range(4):
+            answer+=str(items[i])
+        st.session_state.answer=answer
 
     number=st.sidebar.text_input('請輸入數字')
     st.write(st.session_state.answer)
