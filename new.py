@@ -15,7 +15,6 @@ st.title('👇👇')
 
 items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 random.shuffle(items)
-#st.write(answer)
 
 answer=''
 
@@ -29,7 +28,8 @@ if submit_button:
     st.session_state.answer=answer
 
     number=st.text_input('請輸入數字')
-    
+    st.write(st.session_state.answer)
+
 #while(True):
     #number=st.text_input('Enter the number: ')
 #st.write(st.session_state.answer)
