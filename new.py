@@ -27,7 +27,7 @@ if submit_button:
         answer+=str(items[i])
     st.session_state.answer=answer
 
-    number=st.text_input('請輸入數字')
+    number=st.sidebar.text_input('請輸入數字')
     st.write(st.session_state.answer)
 
 #while(True):
