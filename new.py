@@ -23,13 +23,13 @@ b_count=0 # initial B count
 
 submit_button = st.button(label='開始遊戲')   
 number=st.sidebar.text_input('請輸入數字')
-st.write(st.session_state.answer)
 
 if submit_button:
     for i in range(4):
         answer+=str(items[i])
     st.session_state.answer=answer
-
+    
+st.write(st.session_state.answer)
 
 #while(True):
     #number=st.text_input('Enter the number: ')
